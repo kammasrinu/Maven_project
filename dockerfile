@@ -1,5 +1,4 @@
 FROM tomcat
-ARG SRC_JAR_FILE=target/*.war
-ARG DEST_JAR_FILE=/usr/local/tomcat/webapps
-COPY ${SRC_JAR_FILE} ${DEST_JAR_FILE}
+ARG SRC_JAR_FILE=/var/lib/jenkins/workspace/Docker_test1/webapp/target/*.war
+COPY ${SRC_JAR_FILE} /tmp
 ENTRYPOINT ["catalina.sh","run"]
