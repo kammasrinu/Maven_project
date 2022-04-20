@@ -1,3 +1,3 @@
 FROM tomcat
-COPY /var/lib/jenkins/workspace/maven/webapp/target/webapp.war webapp.war
+cp /var/lib/jenkins/workspace/maven/webapp/target/*.war webapp.war
 ENTRYPOINT ["java", "-jar","webapp.war"]
